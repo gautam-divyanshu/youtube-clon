@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Clone</title>
+    <!--bootstrap css link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./images/youtube.png" type="image/x-icon">
+</head>
+<body>
+    <!--navbar starts here-->
+
+    <nav class="navbar navbar-expand " data-bs-theme="dark" style="background-color: #121212;">
+        <div class="container-fluid">
+
+            <!--sidebar hamburger-->
+            <a class="btn btn-tertiary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 11C6 10.4477 6.44772 10 7 10H41C41.5523 10 42 10.4477 42 11C42 11.5523 41.5523 12 41 12H7C6.44772 12 6 11.5523 6 11Z" fill="#ffffff"/> 
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 24C6 23.4477 6.44772 23 7 23H41C41.5523 23 42 23.4477 42 24C42 24.5523 41.5523 25 41 25H7C6.44772 25 6 24.5523 6 24Z" fill="#ffffff"/> 
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 37C6 36.4477 6.44772 36 7 36H41C41.5523 36 42 36.4477 42 37C42 37.5523 41.5523 38 41 38H7C6.44772 38 6 37.5523 6 37Z" fill="#ffffff"/> </svg>
+              </a>
+            <!--sidebar hamburger ends-->
+
+          <a class="navbar-brand"><img src="./images/youtube.png" alt="youtube.png" width="30" height="30">YouTube</a>
+
+          <!--search box-->
+          <form class="d-flex search-form" role="search">
+            <input class="form-control search-input"  type="search" placeholder="Search" aria-label="Search" style="background-color: #121212;">
+            <button class="btn btn-outline-secondary" type="submit" style="background-color: #202020;"><img src="./images/search-interface-symbol.png" alt="search.png" width="15" height="15"></button>
+          </form>
+          <!--search box end here-->
+
+          <!--nav items-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">  
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="./images/create.png" alt="youtube.png" width="23" height="23"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="./images/bell.png" alt="bell.png" width="23" height="23"></a>
+              </li>
+              <li class="nav-item user">
+                <a class="nav-link active" aria-current="page" href="#"><img src="./images/user.png" alt="user.png" width="30" height="30"></a>
+              </li>
+            </ul>
+
+
+          </div>
+        </div>
+      </nav>
+
+      <!--sidebar starts here-->
+      <div class="offcanvas offcanvas-start" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" data-bs-theme="dark" style="background-color: #121212;width: 40vh;">
+        <div class="offcanvas-header">
+
+            <!--sidebar hamburger-->
+            <a class="btn btn-tertiary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 11C6 10.4477 6.44772 10 7 10H41C41.5523 10 42 10.4477 42 11C42 11.5523 41.5523 12 41 12H7C6.44772 12 6 11.5523 6 11Z" fill="#ffffff"/> 
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 24C6 23.4477 6.44772 23 7 23H41C41.5523 23 42 23.4477 42 24C42 24.5523 41.5523 25 41 25H7C6.44772 25 6 24.5523 6 24Z" fill="#ffffff"/> 
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 37C6 36.4477 6.44772 36 7 36H41C41.5523 36 42 36.4477 42 37C42 37.5523 41.5523 38 41 38H7C6.44772 38 6 37.5523 6 37Z" fill="#ffffff"/> </svg>
+              </a>
+            <!--sidebar hamburger ends-->
+
+            <a class="offcanvas-title navbar-brand"><img src="./images/youtube.png" alt="youtube.png" width="30" height="30">YouTube</a>
+        </div>
+
+        <div class="offcanvas-body">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                  <a href="#" class="nav-link active text-white btn-outline-secondary" aria-current="page">
+                    <img src="./images/homepage.png" alt="youtube.png" width="20" height="20">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link text-white">
+                    
+                    <img src="./images/subscribe.png" alt="youtube.png" width="20" height="20">
+                    Subscriptions
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="#" class="nav-link text-white">
+                    
+                    <img src="./images/library.png" alt="youtube.png" width="20" height="20">
+                    History
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link text-white">
+                    <img src="./images/your videos.png" alt="youtube.png" width="20" height="20">
+                    Your videos
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link text-white">
+                    <img src="./images/clock.png" alt="youtube.png" width="20" height="20">
+                    Watch later
+                  </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+
+                      <img src="./images/like.png" alt="youtube.png" width="20" height="20">
+                      Liked videos
+                    </a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="#" class="nav-link text-white">
+  
+                      <img src="./images/youtube.png" alt="youtube.png" width="20" height="20">
+                      YouTube Premium
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link text-white">
+        
+                      <img src="./images/youtube.png" alt="youtube.png" width="20" height="20">
+                      YouTube Studio
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link text-white">
+               
+                      <img src="./images/live-streaming.png" alt="youtube.png" width="20" height="20">
+                      YouTube music
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link text-white">
+                    
+                      <img src="./images/youtube-kids.png" alt="youtube.png" width="20" height="20">
+                      YouTube kids
+                    </a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="#" class="nav-link text-white">
+                      
+                      <img src="./images/setting.png" alt="youtube.png" width="20" height="20">
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link text-white">
+                    
+                      <img src="./images/red-flag.png" alt="youtube.png" width="20" height="20">
+                      Report History
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link text-white">
+                     
+                      <img src="./images/question.png" alt="youtube.png" width="20" height="20">
+                      Help
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link text-white">
+                    
+                      <img src="./images/message.png" alt="youtube.png" width="20" height="20">
+                      Send feedback
+                    </a>
+                  </li>
+              </ul>
+        </div>
+      </div>
+
+      <!--static sidebar-->
+      <div class="sidebar">
+        <div class="sidebar-flex-item1">
+
+            <ul class="nav nav-pills flex-column mb-auto text-center" style="margin-top: 10px;">
+
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                      <img src="./images/homepage.png" alt="user.png" width="23" height="23">
+                      <p>Home</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link ">
+                      <img src="./images/subscribe.png" alt="user.png" width="23" height="23">
+                      <p>Subscription</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link ">
+                      <img src="./images/library.png" alt="user.png" width="23" height="23">
+                      <p>Library</p>
+                  </a>
+                </li>
+              </ul>
+        </div>
+        <div class="sidebar-flex-item2">
+            
+        </div>
+    </div>
+ <!--static sidebar ends-->
+
+
+
+    <!--bootstrap js link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
